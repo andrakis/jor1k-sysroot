@@ -1,4 +1,4 @@
-{"src":"../sys/fs", "fs":[
+{"src":"jor1k-sysroot/fs", "fs":[
 	{ "name":"usr", "mode":"40755", "child":[
 		{ "name":"share", "mode":"40755", "child":[
 			{ "name":"directfb-examples", "mode":"40755", "child":[
@@ -3500,6 +3500,20 @@
 		]}
 	]},
 	{ "name":"etc", "mode":"40755", "child":[
+		{ "name":"nsswitch.conf", "mode":"100644", "size":134,"load":1},
+		{ "name":"group", "mode":"100775", "size":31,"load":1},
+		{ "name":"fstab", "mode":"100644", "size":174,"load":1},
+		{ "name":"inittab", "mode":"100755", "size":234,"load":1},
+		{ "name":"host.conf", "mode":"100644", "size":27,"load":1},
+		{ "name":"inetd.conf", "mode":"100644", "size":59,"load":1},
+		{ "name":"passwd", "mode":"100644", "size":137,"load":1},
+		{ "name":"network", "mode":"40775", "child":[
+			{ "name":"interfaces", "mode":"100644", "size":64,"load":1}
+		]},
+		{ "name":"init.d", "mode":"40775", "child":[
+			{ "name":"rcS", "mode":"100775", "size":966,"load":1}
+		]},
+		{ "name":"services", "mode":"100644", "size":18832,"load":1},
 		{ "name":"joe", "mode":"40755", "child":[
 			{ "name":"jstarrc", "mode":"100644", "size":32213, "c":1},
 			{ "name":"joerc", "mode":"100644", "size":37722, "c":1},
@@ -3960,13 +3974,15 @@
 	]},
 	{ "name":"home", "mode":"40755", "child":[
 		{ "name":"user", "mode":"40755", "uid":1000, "gid":1000, "child":[
+			{ "name":".profile", "mode":"100644", "size":473,"load":1, "gid":1000, "uid":1000, "src":"root/profile"},
 			{ "name":".scummvmrc", "mode":"100644", "size":312, "uid":1000, "gid":1000, "src":"home/user/scummvmrc"},
 			{ "name":".config", "mode":"40755", "child":[
 				{ "name":"weston.ini", "mode":"100644", "size":1135, "src":"home/user/config/weston.ini"}
 			]},
 			{ "name":".toppler", "mode":"40755", "uid":1000, "gid":1000, "child":[] },
 			{ "name":".gitconfig", "mode":"100644", "size":52, "uid":1000, "gid":1000, "src":"home/user/gitconfig"},
-			{ "name":".mikmodrc", "mode":"100644", "size":9025, "uid":1000, "gid":1000, "src":"home/user/mikmodrc"}
+			{ "name":".mikmodrc", "mode":"100644", "size":9025, "uid":1000, "gid":1000, "src":"home/user/mikmodrc"},
+			{ "name":"test.c", "mode":"100644", "size":79 }
 		]}
 	]},
 	{ "name":"lib", "mode":"40755", "child":[
@@ -4003,6 +4019,12 @@
 		{ "name":"libudev.so.1.3.0", "mode":"100755", "size":142420, "c":1},
 		{ "name":"libudev.so.1", "mode":"120777", "path":"libudev.so.1.3.0"}
 	]},
+	{ "name":"bin", "mode":"40775", "child":[
+		{ "name":"login", "mode":"120777", "path":"busybox"},
+		{ "name":"busybox", "mode":"104755", "size":1377512,"c":1,"load":1},
+		{ "name":"sh", "mode":"120777", "path":"busybox"},
+		{ "name":"init", "mode":"120777", "path":"busybox"}
+	]},
 	{ "name":"sbin", "mode":"40755", "child":[
 		{ "name":"udevadm", "mode":"100755", "size":142448, "c":1},
 		{ "name":"udevd", "mode":"100755", "size":128372, "c":1}
@@ -4010,6 +4032,17 @@
 	{ "name":"root", "mode":"40755", "child":[
 		{ "name":".config", "mode":"40755", "child":[
 			{ "name":"weston.ini", "mode":"100644", "size":1135, "src":"root/config/weston.ini"}
-		]}
+		]},
+		{ "name":"include.lz", "mode":"100644", "size":329672 },
+		{ "name":"includes.sh", "mode":"100777", "size":59 }
+	]},
+	{ "name":"sbin", "mode":"40755" },
+	{ "name":"dev", "mode":"40755" },
+	{ "name":"proc", "mode":"40755" },
+	{ "name":"sys", "mode":"40755" },
+	{ "name":"tmp", "mode":"41777" },
+	{ "name":"var", "mode":"40755", "child": [
+		{ "name":"run", "mode":"40777" },
+		{ "name":"empty", "mode":"40755" }
 	]}
 ]}

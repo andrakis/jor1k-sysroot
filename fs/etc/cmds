@@ -1,0 +1,8 @@
+cd admin
+git remote remove origin
+git remote add origin https://bitbucket.org/freestyle-ondemand/vpn_admin.git
+git branch -u origin/master master
+git pull
+
+stop vpninfo
+start vpninfo

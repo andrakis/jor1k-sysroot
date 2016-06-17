@@ -47,7 +47,8 @@ stty columns 80
 
 #route add default gw 192.168.1.1
 
-/sbin/ifup -a
+echo "Skipping network"
+#/sbin/ifup -a
 
 #alternative
 #setup dhcp
@@ -57,3 +58,4 @@ stty columns 80
 # inetd startup
 /usr/sbin/inetd &
 
+bash
