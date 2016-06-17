@@ -1339,6 +1339,9 @@
 					{ "name":"DEADLOCK.XM", "mode":"100644", "size":505489, "c":1}
 				]},
 				{ "name":"playlist.mpl", "mode":"100644", "size":911}
+			]},
+			{ "name":"udhcpc", "mode":"40755", "child":[
+				{ "name": "default.script", "mode": "100644", "size":"1285"}
 			]}
 		]},
 		{ "name":"bin", "mode":"40755", "child":[
@@ -1620,7 +1623,9 @@
 			{ "name":"tmux", "mode":"100755", "size":565708, "c":1},
 			{ "name":"mikmod", "mode":"100755", "size":148200, "c":1},
 			{ "name":"libmikmod-config", "mode":"100755", "size":968},
-			{ "name":"bash", "mode":"100755", "size":1018468, "c":1}
+			{ "name":"bash", "mode":"100755", "size":1018468, "c":1},
+			{ "name":"help", "mode":"100755", "size":6950},
+			{ "name":"showmenu", "mode":"100755", "size":9680}
 		]},
 		{ "name":"lib", "mode":"40755", "child":[
 			{ "name":"libgomp.so", "mode":"120777", "path":"libgomp.so.1.0.0"},
@@ -3974,7 +3979,7 @@
 	]},
 	{ "name":"home", "mode":"40755", "child":[
 		{ "name":"user", "mode":"40755", "uid":1000, "gid":1000, "child":[
-			{ "name":".profile", "mode":"100644", "size":473,"load":1, "gid":1000, "uid":1000, "src":"root/profile"},
+			{ "name":".profile", "mode":"100644", "size":522,"load":1, "gid":1000, "uid":1000, "src":"root/profile"},
 			{ "name":".scummvmrc", "mode":"100644", "size":312, "uid":1000, "gid":1000, "src":"home/user/scummvmrc"},
 			{ "name":".config", "mode":"40755", "child":[
 				{ "name":"weston.ini", "mode":"100644", "size":1135, "src":"home/user/config/weston.ini"}
