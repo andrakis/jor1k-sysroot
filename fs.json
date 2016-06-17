@@ -3511,7 +3511,7 @@
 			{ "name":"interfaces", "mode":"100644", "size":64,"load":1}
 		]},
 		{ "name":"init.d", "mode":"40775", "child":[
-			{ "name":"rcS", "mode":"100775", "size":966,"load":1}
+			{ "name":"rcS", "mode":"100775", "size":1093,"load":1}
 		]},
 		{ "name":"services", "mode":"100644", "size":18832,"load":1},
 		{ "name":"joe", "mode":"40755", "child":[
@@ -3982,6 +3982,7 @@
 			{ "name":".toppler", "mode":"40755", "uid":1000, "gid":1000, "child":[] },
 			{ "name":".gitconfig", "mode":"100644", "size":52, "uid":1000, "gid":1000, "src":"home/user/gitconfig"},
 			{ "name":".mikmodrc", "mode":"100644", "size":9025, "uid":1000, "gid":1000, "src":"home/user/mikmodrc"},
+			{ "name":"hanoi.in", "mode":"100644", "size":255 },
 			{ "name":"test.c", "mode":"100644", "size":79 }
 		]}
 	]},
