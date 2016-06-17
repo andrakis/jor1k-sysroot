@@ -58,3 +58,5 @@ echo "Skipping network"
 # inetd startup
 /usr/sbin/inetd &
 
+rm /bin/sh
+ln -s /usr/bin/bash /bin/sh
