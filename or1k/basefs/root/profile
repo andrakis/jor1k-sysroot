@@ -13,3 +13,7 @@ echo -e "Note, you can exit most programs by pressing CTRL+C"
 
 # Override bash's help
 alias help='/usr/bin/help'
+
+# Adjust path to include sbin
+PATH=/sbin:$PATH
+export PATH

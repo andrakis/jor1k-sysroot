@@ -17,7 +17,7 @@
 			{ "name":"interfaces", "mode":"100644", "size":64,"load":1}
 		]},
 		{ "name":"init.d", "mode":"40775", "child":[
-			{ "name":"rcS", "mode":"100775", "size":966,"load":1}
+			{ "name":"rcS", "mode":"100775", "size":1158,"load":1}
 		]},
 		{ "name":"services", "mode":"100644", "size":18832,"load":1},
 		{ "name":"joe", "mode":"40755", "child":[
@@ -468,7 +468,7 @@
 	]},
 	{ "name":"home", "mode":"40755", "child":[
 		{ "name":"user", "mode":"42755", "uid":1000, "gid":1000, "child":[
-			{ "name":".profile", "mode":"100644", "size":522,"load":1, "gid":1000, "uid":1000, "src":"root/profile"},
+			{ "name":".profile", "mode":"100644", "size":582,"load":1, "gid":1000, "uid":1000, "src":"root/profile"},
 			{ "name":".scummvmrc", "mode":"100644", "size":312, "uid":1000, "gid":1000, "src":"home/user/scummvmrc"},
 			{ "name":".config", "mode":"40755", "child":[
 				{ "name":"weston.ini", "mode":"100644", "size":1135, "src":"home/user/config/weston.ini"}
@@ -4016,9 +4016,7 @@
 			{ "name":"tmux", "mode":"100755", "size":565708, "c":1},
 			{ "name":"mikmod", "mode":"100755", "size":148200, "c":1},
 			{ "name":"libmikmod-config", "mode":"100755", "size":968},
-			{ "name":"bash", "mode":"100755", "size":1018468, "c":1},
-			{ "name":"help", "mode":"100755", "size":6950},
-			{ "name":"showmenu", "mode":"100755", "size":9680}
+			{ "name":"bash", "mode":"100755", "size":1018468, "c":1}
 		]}
 	]},
 	{ "name":"sbin", "mode":"40755", "child":[

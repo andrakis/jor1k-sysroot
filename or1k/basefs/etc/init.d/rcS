@@ -58,5 +58,6 @@ stty columns 80
 # inetd startup
 /usr/sbin/inetd &
 
-#rm /bin/sh
-#ln -s /usr/bin/bash /bin/sh
+# Override /bin/sh to point to bash for a better user experience
+rm /bin/sh
+ln -s /usr/bin/bash /bin/sh
