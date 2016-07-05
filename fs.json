@@ -470,6 +470,7 @@
 		{ "name":"user", "mode":"42755", "uid":1000, "gid":1000, "child":[
 			{ "name":".profile", "mode":"100644", "size":582,"load":1, "gid":1000, "uid":1000, "src":"root/profile"},
 			{ "name":".scummvmrc", "mode":"100644", "size":312, "uid":1000, "gid":1000, "src":"home/user/scummvmrc"},
+			{ "name":".tmux.conf", "mode":"100644", "size":312, "uid":1000, "gid":1000},
 			{ "name":".config", "mode":"40755", "child":[
 				{ "name":"weston.ini", "mode":"100644", "size":1135, "src":"home/user/config/weston.ini"}
 			]},
