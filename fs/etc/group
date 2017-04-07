@@ -1,1 +1,2 @@
-../../or1k/basefs/etc/group
+root:x:0:root
+user:x:1000:user

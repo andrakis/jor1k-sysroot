@@ -1,1 +1,22 @@
-../../or1k/basefs/root/profile
+export SDL_MOUSEDEV=/dev/input/event1
+export SDL_MOUSEDRV=TSLIB
+export TSLIB_TSDEVICE=/dev/input/event1
+export TERM=linux
+export DISPLAY=:0
+
+red='\e[1;41m'
+NC='\e[0m' # No Color
+echo -e "${red}*******************************************************${NC}"
+echo -e "${red}* Don't know what to do? Type 'help' and press enter. *${NC}"
+echo -e "${red}*******************************************************${NC}"
+echo -e "Note, you can exit most programs by pressing CTRL+C"
+echo -e "You can also use CTRL+X x to exit the emulator."
+
+# Override bash's help
+alias help='/usr/bin/help'
+
+# Adjust path to include sbin
+PATH=/sbin:$PATH
+export PATH
+
+/home/user/first.sh

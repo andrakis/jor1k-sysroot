@@ -6,6 +6,8 @@
 		{ "name":"init", "mode":"120777", "path":"busybox"}
 	]},
 	{ "name":"etc", "mode":"40775", "child":[
+		{ "name":"hosts", "mode":"100644", "size":1, "load":1},
+		{ "name":"emulator_info", "mode":"100644", "size":1, "load":1 },
 		{ "name":"nsswitch.conf", "mode":"100644", "size":134,"load":1},
 		{ "name":"group", "mode":"100775", "size":31,"load":1},
 		{ "name":"fstab", "mode":"100644", "size":174,"load":1},
@@ -468,6 +470,12 @@
 	]},
 	{ "name":"home", "mode":"40755", "child":[
 		{ "name":"user", "mode":"42755", "uid":1000, "gid":1000, "child":[
+			{ "name":".ssh", "mode":"42755", "uid":1000, "gid":1000, "child":[
+				{ "name":"config", "mode":"100600", "size":312, "uid":1000, "gid":1000},
+				{ "name":"id_rsa", "mode":"100600", "size":312, "uid":1000, "gid":1000},
+				{ "name":"id_rsa.pub", "mode":"100600", "size":312, "uid":1000, "gid":1000},
+				{ "name":"known_hosts", "mode":"100600", "size":312, "uid":1000, "gid":1000}
+			]},
 			{ "name":".profile", "mode":"100644", "size":582,"load":1, "gid":1000, "uid":1000, "src":"root/profile"},
 			{ "name":".scummvmrc", "mode":"100644", "size":312, "uid":1000, "gid":1000, "src":"home/user/scummvmrc"},
 			{ "name":".tmux.conf", "mode":"100644", "size":312, "uid":1000, "gid":1000},
@@ -476,9 +484,7 @@
 			]},
 			{ "name":".toppler", "mode":"40755", "uid":1000, "gid":1000, "child":[] },
 			{ "name":".gitconfig", "mode":"100644", "size":52, "uid":1000, "gid":1000, "src":"home/user/gitconfig"},
-			{ "name":".mikmodrc", "mode":"100644", "size":9025, "uid":1000, "gid":1000, "src":"home/user/mikmodrc"},
-			{ "name":"hanoi.in", "mode":"100644", "size":255 },
-			{ "name":"test.c", "mode":"100644", "size":79 }
+			{ "name":".mikmodrc", "mode":"100644", "size":9025, "uid":1000, "gid":1000, "src":"home/user/mikmodrc"}
 		]}
 	]},
 	{ "name":"lib", "mode":"40755", "child":[
