@@ -32,8 +32,22 @@ chmod a+rw /dev/dsp*
 chmod -R a+rw /dev/snd
 
 #set rows and columns of terminal
-stty rows 24
-stty columns 80
+rows=24
+columns=80
+
+tmp=`cat /etc/emulator_info | grep columns: | sed s/columns://`
+if [ "$?" -eq 0 ]; then
+	columns=$tmp
+fi
+
+tmp=`cat /etc/emulator_info | grep rows: | sed s/rows://`
+if [ "$?" -eq 0 ]; then
+	rows=$tmp
+fi
+
+echo "Setting terminal to $columns x $rows"
+stty rows $rows
+stty columns $columns
 
 #echo "Configuring loopback device"
 #ifconfig lo 127.0.0.1
@@ -47,7 +61,12 @@ stty columns 80
 
 #route add default gw 192.168.1.1
 
-/sbin/ifup -a
+grep 'network:1' /etc/emulator_info
+if [ "$?" -eq 0 ]; then
+	/sbin/ifup -a
+else
+	echo "Skipping network"
+fi
 
 #alternative
 #setup dhcp
@@ -57,3 +76,11 @@ stty columns 80
 # inetd startup
 /usr/sbin/inetd &
 
+echo "Fixing /tmp"
+chmod o+w /tmp
+
+# Override /bin/sh to point to bash for a better user experience
+if [ -f /usr/bin/bash ]; then
+	rm /bin/sh
+	ln -s /usr/bin/bash /bin/sh
+fi

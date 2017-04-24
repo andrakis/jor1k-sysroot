@@ -7238,6 +7238,7 @@
 		]}
 	]},
 	{ "name":"etc", "mode":"40755", "child":[
+		{ "name":"emulator_info", "mode":"100644", "size":20 },
 		{ "name":"joe", "mode":"40755", "child":[
 			{ "name":"jstarrc", "mode":"100644", "size":32213, "c":1},
 			{ "name":"joerc", "mode":"100644", "size":37722, "c":1},
